@@ -1,120 +1,779 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#f4511e" />
-  <title>Candra Creative Store — Produk Digital & Jasa Kreatif</title>
-  <meta name="description" content="Belanja produk digital dan jasa kreatif Candra Creative. Tambahkan ke keranjang dan checkout langsung melalui WhatsApp." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ee4d2d">
+  <title>Candra Creative Store | Produk & Jasa Digital</title>
+  <meta name="description" content="Marketplace produk dan jasa digital Candra Creative Store. Temukan template Excel, CV, PowerPoint, landing page, voice over, dan layanan kreatif lainnya.">
+  <link rel="canonical" href="https://candra-3642e.web.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Candra Creative Store">
+  <meta property="og:description" content="Produk dan jasa digital untuk membantu pekerjaan, bisnis, dan kebutuhan kreatif Anda.">
+  <meta property="og:url" content="https://candra-3642e.web.app/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OnlineStore",
+    "name": "Candra Creative Store",
+    "url": "https://candra-3642e.web.app/",
+    "description": "Marketplace produk dan jasa digital.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+62-858-4692-6937",
+      "contactType": "customer service",
+      "availableLanguage": "Indonesian"
+    }
+  }
+  </script>
   <style>
-    :root{--brand:#f4511e;--brand2:#ff6a2a;--ink:#1f2937;--muted:#6b7280;--line:#e5e7eb;--bg:#f6f7f9;--card:#fff;--success:#16a34a;--shadow:0 8px 28px rgba(15,23,42,.08)}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
-    button,input,select,textarea{font:inherit} button{cursor:pointer} img{display:block;max-width:100%} a{text-decoration:none;color:inherit}
-    .topbar{background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;position:sticky;top:0;z-index:40;box-shadow:0 2px 10px rgba(0,0,0,.12)}
-    .topbar-inner{max-width:1180px;margin:auto;padding:12px 18px;display:flex;align-items:center;gap:14px}.brand{font-weight:900;letter-spacing:-.4px;white-space:nowrap;font-size:20px}.brand small{display:block;font-size:10px;font-weight:600;opacity:.86;letter-spacing:.4px}
-    .search{flex:1;position:relative}.search input{width:100%;border:0;border-radius:10px;padding:12px 44px 12px 14px;outline:0;background:#fff;color:#111827}.search button{position:absolute;right:5px;top:5px;border:0;background:#fff1eb;color:var(--brand);border-radius:8px;width:34px;height:34px;font-weight:900}
-    .cart-head{border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.12);color:#fff;border-radius:10px;padding:10px 12px;font-weight:800;position:relative}.cart-count{position:absolute;right:-7px;top:-7px;background:#fff;color:var(--brand);border-radius:999px;min-width:20px;height:20px;padding:0 5px;display:grid;place-items:center;font-size:11px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
-    .wrap{max-width:1180px;margin:auto;padding:18px}.hero{background:linear-gradient(120deg,#fff0ea,#fff 58%,#fff7ed);border:1px solid #ffe0d3;border-radius:18px;padding:28px;display:grid;grid-template-columns:1.35fr .65fr;gap:22px;align-items:center;box-shadow:var(--shadow);overflow:hidden}.hero h1{margin:0 0 10px;font-size:clamp(28px,5vw,48px);line-height:1.04;letter-spacing:-1.5px}.hero h1 span{color:var(--brand)}.hero p{margin:0 0 18px;color:var(--muted);font-size:16px;max-width:650px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:11px;padding:11px 16px;font-weight:800}.btn-primary{background:var(--brand);color:#fff}.btn-soft{background:#fff;color:var(--brand);border:1px solid #ffd1c0}.hero-art{display:grid;grid-template-columns:1fr 1fr;gap:10px;transform:rotate(3deg)}.hero-tile{min-height:112px;background:#fff;border:1px solid #ffe0d3;border-radius:15px;padding:15px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 12px 30px rgba(244,81,30,.09)}.hero-tile strong{font-size:28px;color:var(--brand)}.hero-tile span{font-size:12px;color:var(--muted)}
-    .section-title{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:26px 0 13px}.section-title h2{margin:0;font-size:21px}.section-title p{margin:3px 0 0;color:var(--muted);font-size:13px}.category-row{display:flex;gap:9px;overflow:auto;padding-bottom:4px}.chip{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 14px;font-weight:700;color:#4b5563}.chip.active{border-color:#ffb79a;background:#fff1eb;color:var(--brand)}
-    .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.product{background:var(--card);border:1px solid #eceff3;border-radius:15px;overflow:hidden;box-shadow:0 3px 12px rgba(15,23,42,.04);transition:.2s}.product:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.p-img{aspect-ratio:1/1;background:#f3f4f6;overflow:hidden;position:relative}.p-img img{width:100%;height:100%;object-fit:cover}.badge{position:absolute;left:9px;top:9px;background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.9);border-radius:999px;padding:5px 8px;font-size:10px;font-weight:800;color:var(--brand)}.p-body{padding:12px}.p-name{font-size:14px;line-height:1.38;font-weight:750;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:39px}.p-price{margin-top:9px;font-weight:900;color:var(--brand);font-size:15px}.p-meta{font-size:11px;color:var(--muted);margin-top:5px}.p-actions{display:grid;grid-template-columns:1fr auto;gap:7px;margin-top:10px}.btn-cart{border:0;background:var(--brand);color:#fff;border-radius:9px;padding:9px 10px;font-weight:800}.btn-detail{border:1px solid #ffd0bf;background:#fff7f3;color:var(--brand);border-radius:9px;padding:9px 11px;font-weight:800}
-    .empty{grid-column:1/-1;background:#fff;border:1px dashed #d1d5db;border-radius:15px;padding:32px;text-align:center;color:var(--muted)}
-    .overlay{position:fixed;inset:0;background:rgba(17,24,39,.5);backdrop-filter:blur(2px);z-index:70;opacity:0;pointer-events:none;transition:.2s}.overlay.show{opacity:1;pointer-events:auto}.drawer{position:fixed;right:0;top:0;height:100%;width:min(430px,100%);background:#fff;z-index:80;transform:translateX(102%);transition:.25s;display:flex;flex-direction:column;box-shadow:-14px 0 45px rgba(0,0,0,.14)}.drawer.show{transform:none}.drawer-head{padding:18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.drawer-head h3{margin:0}.icon-btn{border:0;background:#f3f4f6;border-radius:9px;width:36px;height:36px;font-size:20px}.cart-list{padding:12px 16px;overflow:auto;flex:1}.cart-item{display:grid;grid-template-columns:66px 1fr auto;gap:10px;padding:11px 0;border-bottom:1px solid #f0f1f3}.cart-item img{width:66px;height:66px;border-radius:10px;object-fit:cover;background:#f3f4f6}.cart-item b{font-size:12px;line-height:1.35;display:block}.cart-item small{color:var(--muted)}.qty{display:flex;align-items:center;gap:7px;margin-top:7px}.qty button{width:27px;height:27px;border:1px solid var(--line);background:#fff;border-radius:7px}.remove{border:0;background:transparent;color:#dc2626;font-size:11px;padding:0}.checkout{border-top:1px solid var(--line);padding:15px 16px 18px;background:#fff}.checkout h4{margin:0 0 9px}.form-grid{display:grid;gap:8px}.form-grid input,.form-grid textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px 11px;outline:none}.form-grid textarea{resize:vertical;min-height:66px}.checkout-note{font-size:11px;color:var(--muted);margin:8px 0}.wa-btn{width:100%;border:0;border-radius:11px;background:#16a34a;color:#fff;padding:12px 14px;font-weight:900}.wa-btn:hover{background:#15803d}
-    .modal{position:fixed;inset:50% auto auto 50%;transform:translate(-50%,-45%) scale(.98);width:min(760px,calc(100% - 28px));max-height:88vh;overflow:auto;background:#fff;z-index:90;border-radius:18px;box-shadow:0 30px 90px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:.2s}.modal.show{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}.modal-inner{display:grid;grid-template-columns:1fr 1fr}.modal-img{background:#f3f4f6;min-height:330px}.modal-img img{width:100%;height:100%;object-fit:cover}.modal-body{padding:22px}.modal-body h3{margin:0 30px 8px 0;font-size:22px}.modal-close{position:absolute;right:12px;top:12px}.modal-desc{color:var(--muted);font-size:13px;line-height:1.6}.select-wrap{margin:16px 0}.select-wrap label{display:block;font-size:12px;font-weight:800;margin-bottom:6px}.select-wrap select{width:100%;padding:10px;border:1px solid var(--line);border-radius:9px}.modal-actions{display:flex;gap:8px}.modal-actions .btn{flex:1}
-    .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,15px);background:#111827;color:#fff;padding:10px 14px;border-radius:10px;z-index:120;font-size:13px;opacity:0;pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
-    .info{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px;margin-top:25px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.info div{padding:7px}.info b{display:block;margin-bottom:4px}.info span{color:var(--muted);font-size:12px;line-height:1.5}.footer{text-align:center;color:var(--muted);font-size:12px;padding:28px 16px 80px}.mobile-nav{display:none}
-    @media(max-width:900px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{grid-template-columns:1fr}.hero-art{display:none}.info{grid-template-columns:1fr}}
-    @media(max-width:640px){body{padding-bottom:62px}.topbar-inner{padding:10px 12px;display:grid;grid-template-columns:auto 1fr auto}.brand{font-size:17px}.brand small{display:none}.search{grid-column:1/-1;grid-row:2}.cart-head{padding:9px 10px}.wrap{padding:12px}.hero{padding:20px 17px;border-radius:14px}.hero h1{font-size:31px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product{border-radius:11px}.p-body{padding:9px}.p-name{font-size:12.5px;min-height:35px}.p-actions{grid-template-columns:1fr}.btn-detail{display:none}.modal-inner{grid-template-columns:1fr}.modal-img{min-height:240px;max-height:310px}.modal-body{padding:17px}.mobile-nav{position:fixed;display:grid;grid-template-columns:repeat(3,1fr);bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);z-index:45;height:58px}.mobile-nav button{border:0;background:#fff;font-size:11px;color:#4b5563;font-weight:700}.mobile-nav button strong{display:block;font-size:18px;color:var(--brand)}}
+    :root {
+      --brand: #ee4d2d;
+      --brand-dark: #d53f21;
+      --brand-soft: #fff1ed;
+      --ink: #18212f;
+      --muted: #677386;
+      --line: #e8ebf0;
+      --surface: #ffffff;
+      --canvas: #f6f7f9;
+      --success: #16a34a;
+      --shadow: 0 12px 32px rgba(24, 33, 47, .08);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--canvas);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    body.locked { overflow: hidden; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1180px, calc(100% - 32px)); margin-inline: auto; }
+
+    .announcement {
+      padding: 8px 16px;
+      color: #fff;
+      background: #c93a20;
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: linear-gradient(120deg, var(--brand), #ff6c48);
+      box-shadow: 0 6px 20px rgba(181, 53, 29, .2);
+    }
+    .header-main {
+      min-height: 76px;
+      display: grid;
+      grid-template-columns: auto minmax(240px, 1fr) auto;
+      align-items: center;
+      gap: 24px;
+    }
+    .logo { display: flex; align-items: center; gap: 11px; color: #fff; }
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: #fff;
+      color: var(--brand);
+      font-size: 21px;
+      font-weight: 950;
+      box-shadow: 0 8px 20px rgba(117, 34, 18, .18);
+    }
+    .logo-copy strong { display: block; font-size: 17px; letter-spacing: -.3px; }
+    .logo-copy span { display: block; margin-top: 1px; font-size: 10px; opacity: .86; letter-spacing: .12em; }
+    .search-box { position: relative; }
+    .search-box input {
+      width: 100%;
+      height: 46px;
+      padding: 0 50px 0 16px;
+      border: 0;
+      border-radius: 12px;
+      outline: none;
+      background: #fff;
+      color: var(--ink);
+      box-shadow: 0 4px 14px rgba(104, 36, 22, .12);
+    }
+    .search-box input:focus { box-shadow: 0 0 0 3px rgba(255, 255, 255, .35), 0 4px 14px rgba(104, 36, 22, .12); }
+    .search-box button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 38px;
+      height: 36px;
+      border: 0;
+      border-radius: 9px;
+      background: var(--brand-soft);
+      color: var(--brand);
+      font-size: 17px;
+    }
+    .header-cart {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 44px;
+      padding: 0 14px;
+      border: 1px solid rgba(255, 255, 255, .45);
+      border-radius: 12px;
+      color: #fff;
+      background: rgba(255, 255, 255, .12);
+      font-weight: 800;
+    }
+    .cart-badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      min-width: 22px;
+      height: 22px;
+      padding-inline: 6px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--brand);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--brand);
+      font-size: 11px;
+    }
+
+    .category-nav { background: #fff; border-bottom: 1px solid var(--line); }
+    .category-list { display: flex; align-items: center; gap: 8px; min-height: 50px; overflow-x: auto; scrollbar-width: none; }
+    .category-list::-webkit-scrollbar { display: none; }
+    .category-button {
+      flex: 0 0 auto;
+      padding: 8px 13px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: transparent;
+      color: #4d596a;
+      font-size: 13px;
+      font-weight: 750;
+    }
+    .category-button:hover, .category-button.active { color: var(--brand); background: var(--brand-soft); border-color: #ffd5ca; }
+
+    main { padding: 24px 0 64px; }
+    .hero {
+      position: relative;
+      min-height: 318px;
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      align-items: center;
+      gap: 30px;
+      padding: 42px 48px;
+      overflow: hidden;
+      border-radius: 24px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 78% 35%, rgba(255,255,255,.26) 0 3px, transparent 4px),
+        radial-gradient(circle at 90% 22%, rgba(255,255,255,.2) 0 5px, transparent 6px),
+        linear-gradient(125deg, #d93f23 0%, #f45a38 56%, #ff865f 100%);
+      box-shadow: 0 18px 44px rgba(213, 63, 33, .2);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      right: -110px;
+      bottom: -190px;
+      border: 55px solid rgba(255,255,255,.12);
+      border-radius: 50%;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 11px;
+      border: 1px solid rgba(255,255,255,.35);
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .hero h1 { max-width: 650px; margin: 16px 0 13px; font-size: clamp(34px, 5.2vw, 58px); line-height: 1.02; letter-spacing: -2px; }
+    .hero p { max-width: 610px; margin: 0; color: rgba(255,255,255,.88); font-size: 16px; line-height: 1.65; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .primary-button, .secondary-button {
+      min-height: 46px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      font-weight: 850;
+    }
+    .primary-button { color: var(--brand); background: #fff; }
+    .secondary-button { color: #fff; background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.42); }
+    .hero-cards { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .hero-card {
+      min-height: 116px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 17px;
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: 18px;
+      background: rgba(255,255,255,.16);
+      backdrop-filter: blur(7px);
+    }
+    .hero-card:nth-child(2) { transform: translateY(18px); }
+    .hero-card strong { font-size: 25px; }
+    .hero-card span { color: rgba(255,255,255,.84); font-size: 12px; line-height: 1.4; }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 18px 0 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 6px 20px rgba(24, 33, 47, .04);
+    }
+    .benefit { display: flex; align-items: center; gap: 12px; padding: 18px 22px; }
+    .benefit + .benefit { border-left: 1px solid var(--line); }
+    .benefit-icon { width: 40px; height: 40px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 12px; color: var(--brand); background: var(--brand-soft); font-size: 19px; }
+    .benefit strong { display: block; font-size: 13px; }
+    .benefit span { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
+
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 15px; }
+    .section-heading h2 { margin: 0; font-size: 25px; letter-spacing: -.5px; }
+    .section-heading p { margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+    .result-count { color: var(--muted); font-size: 12px; font-weight: 700; }
+    .product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    .product-card {
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(24, 33, 47, .04);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .product-card:hover { transform: translateY(-4px); border-color: #f7b4a4; box-shadow: var(--shadow); }
+    .product-image { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #eef1f5; }
+    .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .product-card:hover .product-image img { transform: scale(1.035); }
+    .product-label { position: absolute; left: 10px; top: 10px; padding: 6px 9px; border-radius: 999px; color: var(--brand); background: rgba(255,255,255,.94); box-shadow: 0 3px 12px rgba(0,0,0,.08); font-size: 10px; font-weight: 850; }
+    .product-content { padding: 14px; }
+    .product-name { min-height: 42px; margin: 0; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-size: 14px; line-height: 1.48; }
+    .product-price { margin-top: 12px; color: var(--brand); font-size: 15px; font-weight: 900; }
+    .product-id { margin-top: 4px; color: #8b95a5; font-size: 10px; }
+    .product-actions { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin-top: 13px; }
+    .add-button, .detail-button { min-height: 39px; border-radius: 10px; font-size: 12px; font-weight: 850; }
+    .add-button { border: 0; color: #fff; background: var(--brand); }
+    .add-button:hover { background: var(--brand-dark); }
+    .detail-button { padding-inline: 12px; border: 1px solid #ffc8ba; color: var(--brand); background: #fff8f6; }
+    .empty-state { grid-column: 1 / -1; padding: 48px 24px; border: 1px dashed #cfd5de; border-radius: var(--radius); color: var(--muted); background: #fff; text-align: center; }
+
+    .contact-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 34px;
+      padding: 25px 28px;
+      border-radius: 20px;
+      background: #192433;
+      color: #fff;
+    }
+    .contact-banner h2 { margin: 0; font-size: 21px; }
+    .contact-banner p { margin: 5px 0 0; color: #bac3d0; font-size: 13px; }
+    .wa-link { flex: 0 0 auto; padding: 12px 16px; border-radius: 11px; background: #22c55e; color: #fff; font-size: 13px; font-weight: 850; }
+
+    footer { padding: 26px 16px 88px; color: var(--muted); background: #fff; border-top: 1px solid var(--line); text-align: center; font-size: 12px; }
+
+    .scrim { position: fixed; inset: 0; z-index: 70; opacity: 0; pointer-events: none; background: rgba(15, 23, 42, .52); backdrop-filter: blur(3px); transition: opacity .2s ease; }
+    .scrim.show { opacity: 1; pointer-events: auto; }
+    .drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 80;
+      width: min(440px, 100%);
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      box-shadow: -20px 0 60px rgba(15, 23, 42, .2);
+      transform: translateX(103%);
+      transition: transform .25s ease;
+    }
+    .drawer.show { transform: translateX(0); }
+    .drawer-header { min-height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; border-bottom: 1px solid var(--line); }
+    .drawer-header h2 { margin: 0; font-size: 19px; }
+    .drawer-header span { display: block; margin-top: 2px; color: var(--muted); font-size: 11px; }
+    .icon-button { width: 38px; height: 38px; border: 0; border-radius: 10px; color: #4b5563; background: #f0f2f5; font-size: 21px; }
+    .cart-list { flex: 1; overflow-y: auto; padding: 8px 18px; }
+    .cart-empty { margin-top: 16px; padding: 38px 20px; border: 1px dashed #cfd5de; border-radius: 15px; color: var(--muted); text-align: center; }
+    .cart-item { display: grid; grid-template-columns: 70px minmax(0, 1fr) auto; gap: 11px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .cart-item img { width: 70px; height: 70px; border-radius: 11px; object-fit: cover; background: #eef1f5; }
+    .cart-name { font-size: 12px; line-height: 1.4; font-weight: 800; }
+    .cart-variant { display: block; margin-top: 3px; color: var(--muted); font-size: 10px; }
+    .quantity { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+    .quantity button { width: 27px; height: 27px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+    .remove-button { align-self: start; padding: 3px 0; border: 0; color: #dc2626; background: transparent; font-size: 10px; }
+    .checkout-box { padding: 16px 18px 20px; border-top: 1px solid var(--line); background: #fff; box-shadow: 0 -8px 24px rgba(15,23,42,.05); }
+    .checkout-box h3 { margin: 0 0 10px; font-size: 15px; }
+    .checkout-form { display: grid; gap: 8px; }
+    .checkout-form input, .checkout-form textarea { width: 100%; padding: 10px 11px; border: 1px solid var(--line); border-radius: 9px; outline: none; }
+    .checkout-form textarea { min-height: 62px; resize: vertical; }
+    .checkout-form input:focus, .checkout-form textarea:focus { border-color: #f5a38f; box-shadow: 0 0 0 3px var(--brand-soft); }
+    .checkout-button { width: 100%; min-height: 46px; margin-top: 10px; border: 0; border-radius: 11px; color: #fff; background: var(--success); font-weight: 900; }
+
+    .modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 90;
+      width: min(760px, calc(100% - 28px));
+      max-height: 88dvh;
+      overflow: auto;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 30px 90px rgba(0,0,0,.28);
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -47%) scale(.98);
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    .modal.show { opacity: 1; pointer-events: auto; transform: translate(-50%, -50%) scale(1); }
+    .modal-close { position: absolute; top: 12px; right: 12px; z-index: 2; }
+    .modal-layout { display: grid; grid-template-columns: 1fr 1fr; }
+    .modal-image { min-height: 390px; background: #eef1f5; }
+    .modal-image img { width: 100%; height: 100%; object-fit: cover; }
+    .modal-body { padding: 30px 24px 24px; }
+    .modal-tag { display: inline-flex; padding: 6px 9px; border-radius: 999px; color: var(--brand); background: var(--brand-soft); font-size: 10px; font-weight: 850; }
+    .modal h2 { margin: 13px 35px 8px 0; font-size: 23px; line-height: 1.3; }
+    .modal-price { color: var(--brand); font-size: 18px; font-weight: 950; }
+    .modal-description { margin: 12px 0 16px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+    .variant-field { margin-bottom: 16px; }
+    .variant-field label { display: block; margin-bottom: 6px; font-size: 12px; font-weight: 800; }
+    .variant-field select { width: 100%; padding: 10px; border: 1px solid var(--line); border-radius: 9px; background: #fff; }
+    .modal-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+    .modal-chat, .modal-add { min-height: 43px; border-radius: 10px; font-size: 12px; font-weight: 850; }
+    .modal-chat { border: 1px solid #acdcb9; color: #12853b; background: #f0fff4; }
+    .modal-add { border: 0; color: #fff; background: var(--brand); }
+
+    .toast { position: fixed; left: 50%; bottom: 26px; z-index: 120; padding: 11px 15px; border-radius: 11px; color: #fff; background: #17202e; box-shadow: var(--shadow); font-size: 12px; opacity: 0; pointer-events: none; transform: translate(-50%, 15px); transition: .2s ease; }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+    .mobile-nav { display: none; }
+
+    @media (max-width: 940px) {
+      .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .hero { grid-template-columns: 1fr; }
+      .hero-cards { display: none; }
+    }
+    @media (max-width: 700px) {
+      .container { width: min(100% - 22px, 1180px); }
+      .announcement { font-size: 10px; }
+      .header-main { min-height: auto; grid-template-columns: 1fr auto; gap: 11px; padding: 10px 0; }
+      .logo-mark { width: 38px; height: 38px; }
+      .logo-copy strong { font-size: 15px; }
+      .logo-copy span { display: none; }
+      .search-box { grid-column: 1 / -1; grid-row: 2; }
+      .header-cart { min-height: 40px; padding: 0 11px; }
+      .header-cart .cart-text { display: none; }
+      .category-list { min-height: 46px; }
+      main { padding-top: 12px; }
+      .hero { min-height: 280px; padding: 31px 22px; border-radius: 18px; }
+      .hero h1 { font-size: 36px; letter-spacing: -1.4px; }
+      .hero p { font-size: 14px; }
+      .benefits { grid-template-columns: 1fr; }
+      .benefit { padding: 14px 16px; }
+      .benefit + .benefit { border-left: 0; border-top: 1px solid var(--line); }
+      .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+      .product-content { padding: 10px; }
+      .product-name { min-height: 39px; font-size: 12.5px; }
+      .product-price { font-size: 13px; }
+      .product-actions { grid-template-columns: 1fr; }
+      .detail-button { display: none; }
+      .contact-banner { align-items: stretch; flex-direction: column; padding: 22px; }
+      .wa-link { text-align: center; }
+      .modal-layout { grid-template-columns: 1fr; }
+      .modal-image { min-height: 240px; max-height: 310px; }
+      .modal-body { padding: 19px; }
+      .modal h2 { font-size: 19px; }
+      .mobile-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 45; height: 60px; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); background: #fff; box-shadow: 0 -6px 20px rgba(15,23,42,.08); }
+      .mobile-nav button { border: 0; color: #536072; background: #fff; font-size: 10px; font-weight: 750; }
+      .mobile-nav b { display: block; margin-bottom: 2px; color: var(--brand); font-size: 18px; }
+    }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">Candra Creative <small>DIGITAL STORE</small></div>
-      <div class="search"><input id="searchInput" type="search" placeholder="Cari template, CV, PPT, landing page..." aria-label="Cari produk"><button id="searchBtn" aria-label="Cari">⌕</button></div>
-      <button class="cart-head" id="openCart">Keranjang <span class="cart-count" id="cartCount">0</span></button>
+  <div class="announcement">Pilih produk, masukkan ke keranjang, lalu pesan langsung melalui WhatsApp</div>
+
+  <header class="header">
+    <div class="container header-main">
+      <a class="logo" href="#top" aria-label="Candra Creative Store">
+        <span class="logo-mark">C</span>
+        <span class="logo-copy"><strong>Candra Creative</strong><span>DIGITAL MARKETPLACE</span></span>
+      </a>
+      <form class="search-box" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="Cari template, CV, PowerPoint, landing page..." aria-label="Cari produk">
+        <button type="submit" aria-label="Cari">⌕</button>
+      </form>
+      <button class="header-cart" id="openCart" type="button" aria-label="Buka keranjang">
+        <span aria-hidden="true">🛒</span><span class="cart-text">Keranjang</span><span class="cart-badge" id="cartCount">0</span>
+      </button>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div>
-        <h1>Produk digital & jasa kreatif, <span>langsung pesan via WhatsApp.</span></h1>
-        <p>Pilih produk, masukkan ke keranjang, lalu kirim detail pesanan ke WhatsApp. Harga belum dicantumkan pada data produk yang diimpor, jadi konfirmasi harga dilakukan saat checkout.</p>
-        <div class="hero-actions"><button class="btn btn-primary" onclick="document.getElementById('products').scrollIntoView()">Lihat Produk</button><button class="btn btn-soft" id="heroCart">Buka Keranjang</button></div>
-      </div>
-      <div class="hero-art"><div class="hero-tile"><strong>11</strong><span>Produk dari katalog Shopee</span></div><div class="hero-tile"><strong>2</strong><span>Kategori utama</span></div><div class="hero-tile"><strong>WA</strong><span>Checkout langsung</span></div><div class="hero-tile"><strong>24/7</strong><span>Katalog dapat dibuka kapan saja</span></div></div>
-    </section>
+  <nav class="category-nav" aria-label="Kategori produk">
+    <div class="container category-list" id="categoryList"></div>
+  </nav>
 
-    <div class="section-title"><div><h2>Kategori</h2><p>Filter cepat sesuai kebutuhan.</p></div></div>
-    <div class="category-row" id="categoryRow"></div>
+  <main id="top">
+    <div class="container">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div>
+          <span class="eyebrow">Candra Creative Store</span>
+          <h1 id="heroTitle">Solusi digital untuk kerja dan bisnis Anda.</h1>
+          <p>Temukan template siap edit dan layanan kreatif dalam satu tempat. Pilih kebutuhan Anda dan pesan dengan mudah melalui WhatsApp.</p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" id="shopNow">Belanja Sekarang</button>
+            <a class="secondary-button" href="https://wa.me/6285846926937" target="_blank" rel="noopener">Hubungi Kami</a>
+          </div>
+        </div>
+        <div class="hero-cards" aria-hidden="true">
+          <div class="hero-card"><strong>Excel</strong><span>Template praktis dan siap diedit</span></div>
+          <div class="hero-card"><strong>Kreatif</strong><span>CV, presentasi, audio, dan website</span></div>
+          <div class="hero-card"><strong>11</strong><span>Pilihan produk dan layanan digital</span></div>
+          <div class="hero-card"><strong>WA</strong><span>Pemesanan langsung dan mudah</span></div>
+        </div>
+      </section>
 
-    <section id="products">
-      <div class="section-title"><div><h2>Rekomendasi Produk</h2><p id="resultText">Memuat katalog...</p></div></div>
-      <div class="grid" id="productGrid"></div>
-    </section>
+      <section class="benefits" aria-label="Keunggulan toko">
+        <div class="benefit"><span class="benefit-icon">✓</span><div><strong>Produk digital</strong><span>Praktis digunakan sesuai kebutuhan</span></div></div>
+        <div class="benefit"><span class="benefit-icon">✎</span><div><strong>Pilihan layanan</strong><span>Tersedia opsi dan paket yang dapat dipilih</span></div></div>
+        <div class="benefit"><span class="benefit-icon">◉</span><div><strong>Pesan via WhatsApp</strong><span>Detail pesanan tersusun otomatis</span></div></div>
+      </section>
 
-    <section class="info"><div><b>Checkout praktis</b><span>Keranjang akan dirangkum menjadi pesan WhatsApp agar detail order lebih rapi.</span></div><div><b>Produk digital & jasa</b><span>Katalog berasal dari daftar produk yang tersedia pada file Shopee yang kamu unggah.</span></div><div><b>Harga dikonfirmasi</b><span>File sumber tidak memuat harga, jadi website tidak mengarang nominal produk.</span></div></section>
+      <section id="products" aria-labelledby="productTitle">
+        <div class="section-heading">
+          <div><h2 id="productTitle">Produk Pilihan</h2><p>Temukan produk digital yang sesuai untuk Anda.</p></div>
+          <span class="result-count" id="resultCount"></span>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="contact-banner">
+        <div><h2>Butuh bantuan memilih produk?</h2><p>Sampaikan kebutuhan Anda dan kami bantu arahkan ke pilihan yang sesuai.</p></div>
+        <a class="wa-link" href="https://wa.me/6285846926937?text=Halo%20Candra%20Creative%2C%20saya%20ingin%20bertanya%20tentang%20produk." target="_blank" rel="noopener">Chat WhatsApp</a>
+      </section>
+    </div>
   </main>
 
-  <footer class="footer">© <span id="year"></span> Candra Creative Store · Katalog digital</footer>
+  <footer>© <span id="year"></span> Candra Creative Store · Produk & Jasa Digital</footer>
 
-  <div class="overlay" id="overlay"></div>
-  <aside class="drawer" id="cartDrawer" aria-label="Keranjang belanja">
-    <div class="drawer-head"><div><h3>Keranjang</h3><small id="cartSummary">0 item</small></div><button class="icon-btn" id="closeCart">×</button></div>
+  <div class="scrim" id="scrim"></div>
+
+  <aside class="drawer" id="cartDrawer" aria-label="Keranjang belanja" aria-hidden="true">
+    <div class="drawer-header">
+      <div><h2>Keranjang</h2><span id="cartSummary">0 produk</span></div>
+      <button class="icon-button" id="closeCart" type="button" aria-label="Tutup keranjang">×</button>
+    </div>
     <div class="cart-list" id="cartList"></div>
-    <div class="checkout">
-      <h4>Data Pemesan</h4>
-      <div class="form-grid"><input id="buyerName" placeholder="Nama lengkap"><input id="buyerPhone" placeholder="Nomor WhatsApp"><textarea id="buyerNote" placeholder="Catatan pesanan / kebutuhan khusus"></textarea></div>
-      <div class="checkout-note">Checkout membuka WhatsApp dengan ringkasan pesanan. Checkout akan dikirim ke WhatsApp toko <b>085846926937</b>.</div>
-      <button class="wa-btn" id="checkoutBtn">Checkout via WhatsApp</button>
+    <div class="checkout-box">
+      <h3>Data Pemesan</h3>
+      <div class="checkout-form">
+        <input id="buyerName" autocomplete="name" placeholder="Nama lengkap" aria-label="Nama lengkap">
+        <input id="buyerPhone" inputmode="tel" autocomplete="tel" placeholder="Nomor WhatsApp" aria-label="Nomor WhatsApp">
+        <textarea id="buyerNote" placeholder="Catatan pesanan (opsional)" aria-label="Catatan pesanan"></textarea>
+      </div>
+      <button class="checkout-button" id="checkoutButton" type="button">Pesan via WhatsApp</button>
     </div>
   </aside>
 
-  <div class="modal" id="productModal"><button class="icon-btn modal-close" id="closeModal">×</button><div class="modal-inner"><div class="modal-img"><img id="modalImage" alt=""></div><div class="modal-body"><div class="badge" style="position:static;display:inline-block;margin-bottom:10px" id="modalCategory"></div><h3 id="modalName"></h3><div class="p-price">Harga dikonfirmasi via WhatsApp</div><p class="modal-desc" id="modalDesc"></p><div class="select-wrap" id="variantWrap"><label id="variantLabel"></label><select id="variantSelect"></select></div><div class="modal-actions"><button class="btn btn-soft" id="modalChat">Tanya via WA</button><button class="btn btn-primary" id="modalAdd">+ Keranjang</button></div></div></div></div>
-  <div class="toast" id="toast"></div>
+  <section class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalName" aria-hidden="true">
+    <button class="icon-button modal-close" id="closeModal" type="button" aria-label="Tutup detail">×</button>
+    <div class="modal-layout">
+      <div class="modal-image"><img id="modalImage" alt=""></div>
+      <div class="modal-body">
+        <span class="modal-tag" id="modalCategory"></span>
+        <h2 id="modalName"></h2>
+        <div class="modal-price">Hubungi untuk harga</div>
+        <p class="modal-description" id="modalDescription"></p>
+        <div class="variant-field" id="variantField">
+          <label id="variantLabel" for="variantSelect"></label>
+          <select id="variantSelect"></select>
+        </div>
+        <div class="modal-actions">
+          <button class="modal-chat" id="modalChat" type="button">Tanya via WA</button>
+          <button class="modal-add" id="modalAdd" type="button">+ Keranjang</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <nav class="mobile-nav"><button onclick="window.scrollTo({top:0,behavior:'smooth'})"><strong>⌂</strong>Beranda</button><button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})"><strong>▦</strong>Produk</button><button id="mobileCart"><strong>🛒</strong>Keranjang</button></nav>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script>
-// ==============================
-// PENGATURAN TOKO
-// Isi nomor WhatsApp dalam format internasional TANPA +, contoh: 6281234567890
-// ==============================
-const SHOP_CONFIG = {
-  name: 'Candra Creative Store',
-  whatsapp: '6285846926937', // 085846926937
-};
+  <nav class="mobile-nav" aria-label="Navigasi seluler">
+    <button type="button" data-mobile="home"><b>⌂</b>Beranda</button>
+    <button type="button" data-mobile="products"><b>▦</b>Produk</button>
+    <button type="button" data-mobile="cart"><b>🛒</b>Keranjang</button>
+  </nav>
 
-const PRODUCTS = [{"id": "48118229416", "name": "Template Excel Invoice & Kuitansi Otomatis Excel | Pembayaran, Piutang dan Dashboard UMKM", "rawCategory": "101937 - Computers & Accessories/Softwares", "category": "Template Excel", "image": "https://cf.shopee.co.id/file/id-11134207-81ztk-mte198hgwrnubf", "variantName": "", "options": [], "price": null, "short": "Produk digital template Excel. Detail harga dan isi paket dikonfirmasi melalui WhatsApp."}, {"id": "44518237948", "name": "Template Excel Keuangan Kalkulator HPP & Harga Jual Makanan Excel Otomatis | Food Cost Kue, Katering, Minuman & UMKM", "rawCategory": "101937 - Computers & Accessories/Softwares", "category": "Template Excel", "image": "https://cf.shopee.co.id/file/id-11134207-81ztm-mtd9zpmtabyid5", "variantName": "", "options": [], "price": null, "short": "Produk digital template Excel. Detail harga dan isi paket dikonfirmasi melalui WhatsApp."}, {"id": "49718132691", "name": "Template Excel Keuangan Budget Planner Rumah Tangga Excel Otomatis Anggaran Bulanan Tabungan Cicilan Editable", "rawCategory": "101937 - Computers & Accessories/Softwares", "category": "Template Excel", "image": "https://cf.shopee.co.id/file/id-11134207-81zte-mtd9zpmt8xe2c1", "variantName": "", "options": [], "price": null, "short": "Produk digital template Excel. Detail harga dan isi paket dikonfirmasi melalui WhatsApp."}, {"id": "56868112385", "name": "Template Excel Keuangan UMKM Otomatis Dashboard Grafik Utang Piutang Editable", "rawCategory": "101937 - Computers & Accessories/Softwares", "category": "Template Excel", "image": "https://cf.shopee.co.id/file/id-11134207-81ztk-mtd9zpmt7itm48", "variantName": "", "options": [], "price": null, "short": "Produk digital template Excel. Detail harga dan isi paket dikonfirmasi melalui WhatsApp."}, {"id": "52215381213", "name": "Jasa Bikin CV & Portofolio ATS Friendly Profesional Menarik untuk Lamar Kerja | Candra Creative", "rawCategory": "101514 - Tickets, Vouchers & Services/Services/Others", "category": "Jasa Digital", "image": "https://cf.shopee.co.id/file/id-11134207-81ztf-mrg51xwr7bb6c3", "variantName": "format dokumen", "options": ["Surat Lamaran", "CV", "Portofolio 1", "Portofolio 2", "Portofolio 3"], "price": null, "short": "Layanan digital Candra Creative. Detail harga, kebutuhan, dan pengerjaan dikonfirmasi melalui WhatsApp."}, {"id": "51614288723", "name": "JASA PEMBUATAN LAGU ORIGINAL CUSTOM Lagu Instrumental Jingle / Lagu Promosi Bergaransi", "rawCategory": "101514 - Tickets, Vouchers & Services/Services/Others", "category": "Jasa Digital", "image": "https://cf.shopee.co.id/file/id-11134207-81ztf-mrs44gs3pj460d", "variantName": "", "options": [], "price": null, "short": "Layanan digital Candra Creative. Detail harga, kebutuhan, dan pengerjaan dikonfirmasi melalui WhatsApp."}, {"id": "48717672620", "name": "Jasa Pembuatan PPT PowerPoint Profesional & Menarik | File PPTX Siap Presentasi", "rawCategory": "101514 - Tickets, Vouchers & Services/Services/Others", "category": "Jasa Digital", "image": "https://cf.shopee.co.id/file/id-11134207-81zth-msxipbph4r9m09", "variantName": "Pilih Paket", "options": ["BASIC", "STANDAR", "PREMIUM"], "price": null, "short": "Layanan digital Candra Creative. Detail harga, kebutuhan, dan pengerjaan dikonfirmasi melalui WhatsApp."}, {"id": "44717172650", "name": "Jasa Pembuatan Undangan Digital Custom Pernikahan Ulang Tahun Khitanan Aqiqah Tasyakuran & Semua Acara", "rawCategory": "101514 - Tickets, Vouchers & Services/Services/Others", "category": "Jasa Digital", "image": "https://cf.shopee.co.id/file/id-11134207-81ztg-msldqzkbev4a61", "variantName": "", "options": [], "price": null, "short": "Layanan digital Candra Creative. Detail harga, kebutuhan, dan pengerjaan dikonfirmasi melalui WhatsApp."}, {"id": "57465977969", "name": "Jasa Voice Over Candra Creative Studio Berita Storytelling Narator Suara Jernih File MP3/WAV", "rawCategory": "101514 - Tickets, Vouchers & Services/Services/Others", "category": "Jasa Digital", "image": "https://cf.shopee.co.id/file/id-11134207-81ztc-mruz2zifve2s67", "variantName": "Durasi", "options": ["3 menit"], "price": null, "short": "Layanan digital Candra Creative. Detail harga, kebutuhan, dan pengerjaan dikonfirmasi melalui WhatsApp."}, {"id": "50015852117", "name": "Jasa ubah audio dan Video ke Teks – Cepat dan Rapi | Candra Creative", "rawCategory": "101514 - Tickets, Vouchers & Services/Services/Others", "category": "Jasa Digital", "image": "https://cf.shopee.co.id/file/id-11134207-81ztn-mrs44gs3ii9y6a", "variantName": "Durasi", "options": ["10 menit"], "price": null, "short": "Layanan digital Candra Creative. Detail harga, kebutuhan, dan pengerjaan dikonfirmasi melalui WhatsApp."}, {"id": "57765879028", "name": "Jasa Pembuatan Landing Page Candra Creative Studio File Website Saja Responsif HP & Desktop HTML CSS Javascript", "rawCategory": "101514 - Tickets, Vouchers & Services/Services/Others", "category": "Jasa Digital", "image": "https://cf.shopee.co.id/file/id-11134207-81zte-mrs44gs3sc92d0", "variantName": "", "options": [], "price": null, "short": "Layanan digital Candra Creative. Detail harga, kebutuhan, dan pengerjaan dikonfirmasi melalui WhatsApp."}];
-let activeCategory='Semua';
-let query='';
-let modalProduct=null;
-let cart=JSON.parse(localStorage.getItem('ccs_cart')||'[]');
+  <script>
+    const STORE = {
+      name: "Candra Creative Store",
+      whatsapp: "6285846926937"
+    };
 
-const $=s=>document.querySelector(s);
-const productGrid=$('#productGrid'), categoryRow=$('#categoryRow'), cartList=$('#cartList');
-const escapeHtml=s=>String(s??'').replace(/[&<>'"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[m]));
-function toast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>t.classList.remove('show'),2200)}
-function productById(id){return PRODUCTS.find(p=>p.id===id)}
-function saveCart(){localStorage.setItem('ccs_cart',JSON.stringify(cart));renderCart()}
-function cartQty(){return cart.reduce((a,b)=>a+b.qty,0)}
-function categories(){return ['Semua',...new Set(PRODUCTS.map(p=>p.category))]}
+    const PRODUCTS = [
+      {id:"48118229416",name:"Template Excel Invoice & Kuitansi Otomatis | Pembayaran, Piutang dan Dashboard UMKM",category:"Template Excel",image:"https://cf.shopee.co.id/file/id-11134207-81ztk-mte198hgwrnubf",variantName:"",options:[],description:"Template Excel siap edit untuk membantu pengelolaan invoice, kuitansi, pembayaran, dan piutang usaha."},
+      {id:"44518237948",name:"Kalkulator HPP & Harga Jual Makanan Excel Otomatis",category:"Template Excel",image:"https://cf.shopee.co.id/file/id-11134207-81ztm-mtd9zpmtabyid5",variantName:"",options:[],description:"Template kalkulator Excel untuk membantu menghitung food cost, HPP, dan harga jual produk makanan atau minuman."},
+      {id:"49718132691",name:"Budget Planner Rumah Tangga Excel Otomatis",category:"Template Excel",image:"https://cf.shopee.co.id/file/id-11134207-81zte-mtd9zpmt8xe2c1",variantName:"",options:[],description:"Template anggaran rumah tangga untuk mencatat pemasukan, pengeluaran, tabungan, dan cicilan bulanan."},
+      {id:"56868112385",name:"Template Keuangan UMKM Otomatis dengan Dashboard",category:"Template Excel",image:"https://cf.shopee.co.id/file/id-11134207-81ztk-mtd9zpmt7itm48",variantName:"",options:[],description:"Template keuangan UMKM dengan pencatatan transaksi, utang piutang, dan dashboard grafik yang dapat diedit."},
+      {id:"52215381213",name:"Jasa Pembuatan CV & Portofolio ATS Friendly",category:"Jasa Digital",image:"https://cf.shopee.co.id/file/id-11134207-81ztf-mrg51xwr7bb6c3",variantName:"Format dokumen",options:["Surat Lamaran","CV","Portofolio 1","Portofolio 2","Portofolio 3"],description:"Layanan pembuatan dokumen lamaran kerja yang rapi dan profesional sesuai kebutuhan Anda."},
+      {id:"51614288723",name:"Jasa Pembuatan Lagu Original, Instrumental & Jingle",category:"Jasa Digital",image:"https://cf.shopee.co.id/file/id-11134207-81ztf-mrs44gs3pj460d",variantName:"",options:[],description:"Layanan pembuatan lagu original, musik instrumental, jingle, dan lagu promosi custom."},
+      {id:"48717672620",name:"Jasa Pembuatan PowerPoint Profesional",category:"Jasa Digital",image:"https://cf.shopee.co.id/file/id-11134207-81zth-msxipbph4r9m09",variantName:"Pilih paket",options:["BASIC","STANDAR","PREMIUM"],description:"Layanan pembuatan slide PowerPoint profesional dengan file PPTX siap presentasi."},
+      {id:"44717172650",name:"Jasa Pembuatan Undangan Digital Custom",category:"Jasa Digital",image:"https://cf.shopee.co.id/file/id-11134207-81ztg-msldqzkbev4a61",variantName:"",options:[],description:"Undangan digital custom untuk pernikahan, ulang tahun, khitanan, aqiqah, tasyakuran, dan acara lainnya."},
+      {id:"57465977969",name:"Jasa Voice Over Candra Creative Studio",category:"Jasa Digital",image:"https://cf.shopee.co.id/file/id-11134207-81ztc-mruz2zifve2s67",variantName:"Durasi",options:["3 menit"],description:"Layanan voice over untuk berita, storytelling, narasi, dan kebutuhan audio dalam format MP3 atau WAV."},
+      {id:"50015852117",name:"Jasa Ubah Audio dan Video ke Teks",category:"Jasa Digital",image:"https://cf.shopee.co.id/file/id-11134207-81ztn-mrs44gs3ii9y6a",variantName:"Durasi",options:["10 menit"],description:"Layanan transkripsi audio dan video menjadi teks yang rapi sesuai materi sumber."},
+      {id:"57765879028",name:"Jasa Pembuatan Landing Page Responsif",category:"Jasa Digital",image:"https://cf.shopee.co.id/file/id-11134207-81zte-mrs44gs3sc92d0",variantName:"",options:[],description:"Layanan pembuatan landing page responsif untuk tampilan ponsel dan desktop dalam format HTML, CSS, dan JavaScript."}
+    ];
 
-function renderCategories(){categoryRow.innerHTML=categories().map(c=>`<button class="chip ${c===activeCategory?'active':''}" data-cat="${escapeHtml(c)}">${escapeHtml(c)}</button>`).join('');categoryRow.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{activeCategory=b.dataset.cat;renderCategories();renderProducts()})}
-function renderProducts(){let list=PRODUCTS.filter(p=>(activeCategory==='Semua'||p.category===activeCategory)&&(!query||p.name.toLowerCase().includes(query)||p.category.toLowerCase().includes(query)));$('#resultText').textContent=`${list.length} dari ${PRODUCTS.length} produk`;productGrid.innerHTML=list.length?list.map(p=>`<article class="product"><div class="p-img"><img src="${escapeHtml(p.image)}" loading="lazy" alt="${escapeHtml(p.name)}" onerror="this.style.opacity='.25';this.alt='Gambar tidak tersedia'"><span class="badge">${escapeHtml(p.category)}</span></div><div class="p-body"><div class="p-name">${escapeHtml(p.name)}</div><div class="p-price">Harga via WhatsApp</div><div class="p-meta">ID Produk: ${escapeHtml(p.id)}</div><div class="p-actions"><button class="btn-cart" data-add="${p.id}">+ Keranjang</button><button class="btn-detail" data-detail="${p.id}">Detail</button></div></div></article>`).join(''):`<div class="empty">Produk tidak ditemukan. Coba kata kunci lain.</div>`;productGrid.querySelectorAll('[data-add]').forEach(b=>b.onclick=()=>quickAdd(b.dataset.add));productGrid.querySelectorAll('[data-detail]').forEach(b=>b.onclick=()=>openProduct(b.dataset.detail));}
-function quickAdd(id){const p=productById(id);if(p.options.length){openProduct(id);return}addToCart(id,'')}
-function addToCart(id,variant=''){const found=cart.find(x=>x.id===id&&x.variant===variant);if(found)found.qty++;else cart.push({id,variant,qty:1});saveCart();toast('Produk ditambahkan ke keranjang')}
-function renderCart(){const qty=cartQty();$('#cartCount').textContent=qty;$('#cartSummary').textContent=`${qty} item`;if(!cart.length){cartList.innerHTML='<div class="empty" style="margin-top:8px">Keranjang masih kosong.</div>';return}cartList.innerHTML=cart.map((x,i)=>{const p=productById(x.id);if(!p)return'';return `<div class="cart-item"><img src="${escapeHtml(p.image)}" alt=""><div><b>${escapeHtml(p.name)}</b>${x.variant?`<small>${escapeHtml(p.variantName||'Variasi')}: ${escapeHtml(x.variant)}</small>`:''}<div class="qty"><button data-dec="${i}">−</button><span>${x.qty}</span><button data-inc="${i}">+</button></div></div><button class="remove" data-rem="${i}">Hapus</button></div>`}).join('');cartList.querySelectorAll('[data-inc]').forEach(b=>b.onclick=()=>{cart[+b.dataset.inc].qty++;saveCart()});cartList.querySelectorAll('[data-dec]').forEach(b=>b.onclick=()=>{const x=cart[+b.dataset.dec];x.qty--;if(x.qty<=0)cart.splice(+b.dataset.dec,1);saveCart()});cartList.querySelectorAll('[data-rem]').forEach(b=>b.onclick=()=>{cart.splice(+b.dataset.rem,1);saveCart()})}
-function openCart(){renderCart();$('#overlay').classList.add('show');$('#cartDrawer').classList.add('show')}
-function closeCart(){if($('#productModal').classList.contains('show'))return;$('#overlay').classList.remove('show');$('#cartDrawer').classList.remove('show')}
-function openProduct(id){const p=productById(id);modalProduct=p;$('#modalImage').src=p.image;$('#modalImage').alt=p.name;$('#modalCategory').textContent=p.category;$('#modalName').textContent=p.name;$('#modalDesc').textContent=p.short;const wrap=$('#variantWrap');if(p.options.length){wrap.style.display='block';$('#variantLabel').textContent=p.variantName||'Pilih variasi';$('#variantSelect').innerHTML=p.options.map(o=>`<option>${escapeHtml(o)}</option>`).join('')}else wrap.style.display='none';$('#overlay').classList.add('show');$('#productModal').classList.add('show')}
-function closeModal(){modalProduct=null;$('#productModal').classList.remove('show');if(!$('#cartDrawer').classList.contains('show'))$('#overlay').classList.remove('show')}
-function getVariant(){return modalProduct&&modalProduct.options.length?$('#variantSelect').value:''}
-function buildMessage(singleProduct=null){const name=$('#buyerName').value.trim();const phone=$('#buyerPhone').value.trim();const note=$('#buyerNote').value.trim();const lines=[];lines.push(`Halo ${SHOP_CONFIG.name}, saya ingin memesan:`,'');const items=singleProduct?[{id:singleProduct.id,variant:getVariant(),qty:1}]:cart;items.forEach((x,i)=>{const p=productById(x.id);if(!p)return;lines.push(`${i+1}. ${p.name}`);lines.push(`   Qty: ${x.qty}`);if(x.variant)lines.push(`   ${p.variantName||'Variasi'}: ${x.variant}`);lines.push(`   ID Produk: ${p.id}`,'')});if(name)lines.push(`Nama: ${name}`);if(phone)lines.push(`WhatsApp pembeli: ${phone}`);if(note)lines.push(`Catatan: ${note}`);lines.push('','Mohon info harga dan langkah selanjutnya. Terima kasih.');return lines.join('\n')}
-function openWhatsApp(message){if(!SHOP_CONFIG.whatsapp){toast('Nomor WhatsApp toko belum diisi di SHOP_CONFIG.whatsapp');return}window.open(`https://wa.me/${SHOP_CONFIG.whatsapp}?text=${encodeURIComponent(message)}`,'_blank')}
+    const qs = selector => document.querySelector(selector);
+    const qsa = selector => [...document.querySelectorAll(selector)];
+    const escapeHTML = value => String(value ?? "").replace(/[&<>\"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[char]));
+    const findProduct = id => PRODUCTS.find(product => product.id === id);
 
-$('#searchInput').addEventListener('input',e=>{query=e.target.value.trim().toLowerCase();renderProducts()});$('#searchBtn').onclick=()=>renderProducts();$('#openCart').onclick=openCart;$('#heroCart').onclick=openCart;$('#mobileCart').onclick=openCart;$('#closeCart').onclick=()=>{$('#cartDrawer').classList.remove('show');if(!$('#productModal').classList.contains('show'))$('#overlay').classList.remove('show')};$('#closeModal').onclick=closeModal;$('#overlay').onclick=()=>{$('#cartDrawer').classList.remove('show');closeModal()};$('#modalAdd').onclick=()=>{if(!modalProduct)return;addToCart(modalProduct.id,getVariant());closeModal()};$('#modalChat').onclick=()=>{if(modalProduct)openWhatsApp(buildMessage(modalProduct))};$('#checkoutBtn').onclick=()=>{if(!cart.length){toast('Keranjang masih kosong');return}openWhatsApp(buildMessage())};
-$('#year').textContent=new Date().getFullYear();renderCategories();renderProducts();renderCart();
-</script>
+    let category = "Semua";
+    let searchTerm = "";
+    let selectedProduct = null;
+    let cart = [];
+    try {
+      const savedCart = JSON.parse(localStorage.getItem("candra_cart") || "[]");
+      cart = Array.isArray(savedCart) ? savedCart.filter(item => findProduct(item.id)) : [];
+    } catch (_) {
+      cart = [];
+    }
+
+    function showToast(message) {
+      const toast = qs("#toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => toast.classList.remove("show"), 2200);
+    }
+
+    function categories() {
+      return ["Semua", ...new Set(PRODUCTS.map(product => product.category))];
+    }
+
+    function renderCategories() {
+      qs("#categoryList").innerHTML = categories().map(item => `
+        <button type="button" class="category-button ${item === category ? "active" : ""}" data-category="${escapeHTML(item)}">${escapeHTML(item)}</button>
+      `).join("");
+      qsa("[data-category]").forEach(button => {
+        button.addEventListener("click", () => {
+          category = button.dataset.category;
+          renderCategories();
+          renderProducts();
+        });
+      });
+    }
+
+    function filteredProducts() {
+      return PRODUCTS.filter(product => {
+        const categoryMatch = category === "Semua" || product.category === category;
+        const text = `${product.name} ${product.category}`.toLowerCase();
+        return categoryMatch && (!searchTerm || text.includes(searchTerm));
+      });
+    }
+
+    function renderProducts() {
+      const items = filteredProducts();
+      qs("#resultCount").textContent = `${items.length} produk`;
+      qs("#productGrid").innerHTML = items.length ? items.map(product => `
+        <article class="product-card">
+          <div class="product-image">
+            <img src="${escapeHTML(product.image)}" alt="${escapeHTML(product.name)}" loading="lazy" onerror="this.style.opacity='.25'">
+            <span class="product-label">${escapeHTML(product.category)}</span>
+          </div>
+          <div class="product-content">
+            <h3 class="product-name">${escapeHTML(product.name)}</h3>
+            <div class="product-price">Hubungi untuk harga</div>
+            <div class="product-id">ID ${escapeHTML(product.id)}</div>
+            <div class="product-actions">
+              <button class="add-button" type="button" data-add="${product.id}">+ Keranjang</button>
+              <button class="detail-button" type="button" data-detail="${product.id}">Detail</button>
+            </div>
+          </div>
+        </article>
+      `).join("") : `<div class="empty-state"><strong>Produk tidak ditemukan</strong><br>Coba kata kunci atau kategori lainnya.</div>`;
+
+      qsa("[data-add]").forEach(button => button.addEventListener("click", () => quickAdd(button.dataset.add)));
+      qsa("[data-detail]").forEach(button => button.addEventListener("click", () => openProduct(button.dataset.detail)));
+    }
+
+    function saveCart() {
+      localStorage.setItem("candra_cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    function quickAdd(id) {
+      const product = findProduct(id);
+      if (product.options.length) {
+        openProduct(id);
+      } else {
+        addToCart(id, "");
+      }
+    }
+
+    function addToCart(id, variant) {
+      const item = cart.find(entry => entry.id === id && entry.variant === variant);
+      if (item) item.quantity += 1;
+      else cart.push({id, variant, quantity: 1});
+      saveCart();
+      showToast("Produk ditambahkan ke keranjang");
+    }
+
+    function renderCart() {
+      const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+      qs("#cartCount").textContent = total;
+      qs("#cartSummary").textContent = `${total} produk`;
+      qs("#cartList").innerHTML = cart.length ? cart.map((item, index) => {
+        const product = findProduct(item.id);
+        return `
+          <div class="cart-item">
+            <img src="${escapeHTML(product.image)}" alt="">
+            <div>
+              <div class="cart-name">${escapeHTML(product.name)}</div>
+              ${item.variant ? `<span class="cart-variant">${escapeHTML(product.variantName)}: ${escapeHTML(item.variant)}</span>` : ""}
+              <div class="quantity"><button type="button" data-decrease="${index}">−</button><span>${item.quantity}</span><button type="button" data-increase="${index}">+</button></div>
+            </div>
+            <button class="remove-button" type="button" data-remove="${index}">Hapus</button>
+          </div>`;
+      }).join("") : `<div class="cart-empty">Keranjang masih kosong.</div>`;
+
+      qsa("[data-increase]").forEach(button => button.addEventListener("click", () => { cart[Number(button.dataset.increase)].quantity += 1; saveCart(); }));
+      qsa("[data-decrease]").forEach(button => button.addEventListener("click", () => {
+        const index = Number(button.dataset.decrease);
+        cart[index].quantity -= 1;
+        if (cart[index].quantity <= 0) cart.splice(index, 1);
+        saveCart();
+      }));
+      qsa("[data-remove]").forEach(button => button.addEventListener("click", () => { cart.splice(Number(button.dataset.remove), 1); saveCart(); }));
+    }
+
+    function showScrim() {
+      document.body.classList.add("locked");
+      qs("#scrim").classList.add("show");
+    }
+
+    function hideScrimIfIdle() {
+      if (!qs("#cartDrawer").classList.contains("show") && !qs("#productModal").classList.contains("show")) {
+        document.body.classList.remove("locked");
+        qs("#scrim").classList.remove("show");
+      }
+    }
+
+    function openCart() {
+      renderCart();
+      closeModal();
+      showScrim();
+      qs("#cartDrawer").classList.add("show");
+      qs("#cartDrawer").setAttribute("aria-hidden", "false");
+    }
+
+    function closeCart() {
+      qs("#cartDrawer").classList.remove("show");
+      qs("#cartDrawer").setAttribute("aria-hidden", "true");
+      hideScrimIfIdle();
+    }
+
+    function openProduct(id) {
+      const product = findProduct(id);
+      if (!product) return;
+      selectedProduct = product;
+      closeCart();
+      qs("#modalImage").src = product.image;
+      qs("#modalImage").alt = product.name;
+      qs("#modalCategory").textContent = product.category;
+      qs("#modalName").textContent = product.name;
+      qs("#modalDescription").textContent = product.description;
+      const variantField = qs("#variantField");
+      variantField.hidden = !product.options.length;
+      if (product.options.length) {
+        qs("#variantLabel").textContent = product.variantName || "Pilih variasi";
+        qs("#variantSelect").innerHTML = product.options.map(option => `<option>${escapeHTML(option)}</option>`).join("");
+      }
+      showScrim();
+      qs("#productModal").classList.add("show");
+      qs("#productModal").setAttribute("aria-hidden", "false");
+    }
+
+    function closeModal() {
+      selectedProduct = null;
+      qs("#productModal").classList.remove("show");
+      qs("#productModal").setAttribute("aria-hidden", "true");
+      hideScrimIfIdle();
+    }
+
+    function chosenVariant() {
+      return selectedProduct?.options.length ? qs("#variantSelect").value : "";
+    }
+
+    function buildOrderMessage(singleProduct) {
+      const items = singleProduct ? [{id: singleProduct.id, variant: chosenVariant(), quantity: 1}] : cart;
+      const lines = [`Halo ${STORE.name}, saya ingin memesan:`, ""];
+      items.forEach((item, index) => {
+        const product = findProduct(item.id);
+        if (!product) return;
+        lines.push(`${index + 1}. ${product.name}`, `   Jumlah: ${item.quantity}`);
+        if (item.variant) lines.push(`   ${product.variantName || "Variasi"}: ${item.variant}`);
+        lines.push(`   ID Produk: ${product.id}`, "");
+      });
+      const name = qs("#buyerName").value.trim();
+      const phone = qs("#buyerPhone").value.trim();
+      const note = qs("#buyerNote").value.trim();
+      if (name) lines.push(`Nama: ${name}`);
+      if (phone) lines.push(`WhatsApp pembeli: ${phone}`);
+      if (note) lines.push(`Catatan: ${note}`);
+      lines.push("", "Mohon informasi harga dan langkah pemesanannya. Terima kasih.");
+      return lines.join("\n");
+    }
+
+    function openWhatsApp(message) {
+      window.open(`https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
+    }
+
+    qs("#searchForm").addEventListener("submit", event => { event.preventDefault(); searchTerm = qs("#searchInput").value.trim().toLowerCase(); renderProducts(); qs("#products").scrollIntoView({behavior:"smooth"}); });
+    qs("#searchInput").addEventListener("input", event => { searchTerm = event.target.value.trim().toLowerCase(); renderProducts(); });
+    qs("#shopNow").addEventListener("click", () => qs("#products").scrollIntoView({behavior:"smooth"}));
+    qs("#openCart").addEventListener("click", openCart);
+    qs("#closeCart").addEventListener("click", closeCart);
+    qs("#closeModal").addEventListener("click", closeModal);
+    qs("#scrim").addEventListener("click", () => { closeCart(); closeModal(); });
+    qs("#modalAdd").addEventListener("click", () => { if (selectedProduct) { addToCart(selectedProduct.id, chosenVariant()); closeModal(); } });
+    qs("#modalChat").addEventListener("click", () => { if (selectedProduct) openWhatsApp(buildOrderMessage(selectedProduct)); });
+    qs("#checkoutButton").addEventListener("click", () => { if (!cart.length) return showToast("Keranjang masih kosong"); openWhatsApp(buildOrderMessage()); });
+    qsa("[data-mobile]").forEach(button => button.addEventListener("click", () => {
+      if (button.dataset.mobile === "home") window.scrollTo({top:0, behavior:"smooth"});
+      if (button.dataset.mobile === "products") qs("#products").scrollIntoView({behavior:"smooth"});
+      if (button.dataset.mobile === "cart") openCart();
+    }));
+    document.addEventListener("keydown", event => { if (event.key === "Escape") { closeCart(); closeModal(); } });
+
+    qs("#year").textContent = new Date().getFullYear();
+    renderCategories();
+    renderProducts();
+    renderCart();
+  </script>
 </body>
 </html>
+
